@@ -22,6 +22,6 @@ def statistiques_dictionnaire(dictionnaire):
     "definition_aleatoire": definition_aleatoire
     }
 
-w
+
 
 
