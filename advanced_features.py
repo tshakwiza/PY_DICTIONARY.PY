@@ -1,6 +1,6 @@
 import random # pour faire un choix au hasard
 
-# fonction pour chercher un mot dans les definitions
+# fonction pour chercher les mots dans la definition contient le mot-cle
 def rechercher_par_mot_cle(dictionnaire, mot_cle):
     return{ details["definition"] for mot, details in dictionnaire.items() if mot_cle.lower() in details["definition"].lower()}
 
@@ -8,7 +8,7 @@ def rechercher_par_mot_cle(dictionnaire, mot_cle):
 def statistiques_dictionnaire(dictionnaire):
     total_mots= len(dictionnaire) # compte tout les mots
     mot_le_plus_long=max(dictionnaire.keys(), key=len, default="aucun") # le mot le plus long
-    mot_le_plus_court= min(dictionnaire.keys(), keys=len, default="aucun") # le mot le plus court
+    mot_le_plus_court= min(dictionnaire.keys(), key=len, default="aucun") # le mot le plus court
 
     if dictionnaire:
         mot_aleatoire= random.choice(list(dictionnaire.keys())) # prend un mot au hasard
